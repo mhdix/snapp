@@ -34,7 +34,7 @@ body {
     margin: 0 auto;
 }
 .block {
-    padding: 2rem 3rem;
+    padding: 2rem 5rem;
 }
 
 /* Header */
@@ -63,5 +63,18 @@ header{
 }
 
 @media screen and (min-width: 768px) {
- 
+ .nav__list {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+ }
+ .nav__toggler{
+    display: none;
+ }
+ .menu__icon img {
+    display: flex;
+    align-items: center;
+ }
 }
+
+/* Hero */
