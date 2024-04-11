@@ -23,20 +23,28 @@ body {
     font-size: 1.2rem;
 }
 h2 {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     font-weight: bolder;
 }
 p {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     display: flex;
     padding: 1rem 0;
 }
-@media screen and (min-width: 1024px) {
-    body {
-        font-size: 1.4rem;
+@media screen and (min-width: 768px) {
+    p {
+        font-size: 1.5rem;
     }
     h2{
-        font-size: 2.7rem;
+        font-size: 2.4rem;
+    }
+}
+@media screen and (min-width: 1024px) {
+    p {
+        font-size: 1.9rem;
+    }
+    h2{
+        font-size: 2.8rem;
     }
 }
 /* modifire */
@@ -76,6 +84,12 @@ header{
 /* -Banner */
 .banner {
     display: none;
+    background-color: var(--colot-primary);
+}
+.banner picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* -nav */
 .nav {
@@ -95,18 +109,21 @@ header{
 }
 
 @media screen and (min-width: 768px) {
- .nav__list {
-    display: flex;
-    gap: 2.5rem;
-    align-items: center;
- }
- .nav__toggler{
-    display: none;
- }
- .menu__icon img {
-    display: flex;
-    align-items: center;
- }
+    .nav__list {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+    }
+    .nav__toggler{
+        display: none;
+    }
+    .menu__icon img {
+        display: flex;
+        align-items: center;
+    }
+    .banner {
+        display: block;
+    }
 }
 
 /* Hero */
@@ -116,4 +133,39 @@ header{
 }
 .hero__btn {
     margin-top: 2.5rem;
+}
+.hero__image {
+    transform: scaleX(-1);
+    display: none;
+}
+@media screen and (min-width:768px) {
+    .hero__btn :not(:last-child) {
+        display: none;
+    }
+}
+@media screen and (min-width: 1024px) {
+    
+    .hero {
+        display: flex;
+    }
+    .hero.block {
+        margin: 0;
+        padding: 0;
+    }
+    .hero__image {
+        display: flex;
+        width: 75%;
+    }
+    .hero__btn{
+        display: none;
+    }
+    .hero__image img{
+        width: 100%;
+    }
+    .hero__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }

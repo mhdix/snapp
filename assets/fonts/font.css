@@ -5,6 +5,6 @@
     src: url(Yekan.ttf) format('ttf');
 }
 
-body {
+body,button {
     font-family: 'iranYekan';
 }
