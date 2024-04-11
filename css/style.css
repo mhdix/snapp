@@ -11,6 +11,7 @@
 
 :root {
     --colot-primary: rgb(33, 170, 88);
+    --color-primary-light:rgb(0, 209, 112);
     --color-white: #fff;
     --color-text: #3f3f3f;
     --color-border: #e5e5e5;
@@ -22,10 +23,14 @@ html {
 }
 body {
     list-style-type: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 a {
     color: var(--color-text);
+}
+h1 {
+    font-size: 3rem;
+    line-height: 1.5;
 }
 h2 {
     font-size: 2.2rem;
@@ -42,6 +47,9 @@ p {
 @media screen and (min-width: 768px) {
     p {
         font-size: 1.5rem;
+    }
+    h1 {
+        font-size: 3.2rem;
     }
     h2{
         font-size: 2.4rem;
@@ -77,10 +85,10 @@ p {
 /* Btn */
 .btn {
     outline: 0;
+    border: 0;
     background-color: var(--color-white);
     color: var(--color-text);
-    border: 0;
-    padding: 1rem 0;
+    padding: 1rem 2.5rem;
     margin: 1.5rem 0;
     border-radius: 5px;
 }
@@ -304,4 +312,44 @@ header{
     .definition {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+/* Sign-up */
+.sign-up {
+    background-color: var(--color-light-blue);
+}
+.sign-up__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+.sign-up__header .btn{
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.sign-up__header p {
+    font-size: 1.8rem;
+}
+/* -comment */
+.sign-up__comment {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.comment__parent {
+    background-color: var(--color-white);
+    margin: 0 2rem;
+    border-radius: 18px;
+}
+
+.comment__img img{
+    width: 10rem;
+}
+.comment__img {
+    display: flex;
+    justify-content: center;
 }
