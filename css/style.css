@@ -22,10 +22,21 @@ body {
     list-style-type: none;
     font-size: 1.2rem;
 }
-
+h2 {
+    font-size: 2.3rem;
+    font-weight: bolder;
+}
+p {
+    font-size: 1.7rem;
+    display: flex;
+    padding: 1rem 0;
+}
 @media screen and (min-width: 1024px) {
     body {
         font-size: 1.4rem;
+    }
+    h2{
+        font-size: 2.7rem;
     }
 }
 /* modifire */
@@ -34,9 +45,30 @@ body {
     margin: 0 auto;
 }
 .block {
-    padding: 2rem 5rem;
+    padding: 2rem 3rem;
 }
-
+@media screen and (min-width: 768px) {
+    .block {
+        padding: 2rem 5rem;
+    }
+}
+/* Btn */
+.btn {
+    outline: 0;
+    background-color: var(--color-white);
+    color: var(--color-text);
+    border: 0;
+    padding: 1rem 0;
+    margin: 1.5rem 0;
+    border-radius: 5px;
+}
+.btn--primary {
+    color: var(--colot-primary);
+}
+.btn--block {
+    display: block;
+    width: 100%;
+}
 /* Header */
 header{
     width: 100%;
@@ -78,3 +110,10 @@ header{
 }
 
 /* Hero */
+.hero {
+    background-color: var(--colot-primary);
+    color: var(--color-white);
+}
+.hero__btn {
+    margin-top: 2.5rem;
+}
