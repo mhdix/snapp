@@ -276,6 +276,10 @@ header{
     object-fit: cover;
 }
 @media screen and (min-width:1024px) {
+    .about-us__first-section{
+        display: flex;
+        align-items: center;
+    }
     .about-us__image img {
         width: auto;
     }
@@ -288,4 +292,16 @@ header{
     background-color: var(--color-light-blue);
     border-radius: 18px;
     justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .definition {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width:1024px) {
+    .definition {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
