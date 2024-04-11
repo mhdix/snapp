@@ -77,6 +77,9 @@ p {
 .block {
     padding: 2rem 3rem;
 }
+.text-mute {
+    color: #21212195;
+}
 @media screen and (min-width: 768px) {
     .block {
         padding: 2rem 5rem;
@@ -317,6 +320,7 @@ header{
 /* Sign-up */
 .sign-up {
     background-color: var(--color-light-blue);
+    width: 100%;
 }
 .sign-up__header {
     display: flex;
@@ -352,4 +356,36 @@ header{
 .comment__img {
     display: flex;
     justify-content: center;
+}
+@media screen and (min-width: 768px) {
+    .sign-up__comment{
+        padding: 0 5rem;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .comment__parent {
+        display: flex;
+    }
+    .comment__img {
+        display: flex;
+        align-items: center;
+    }
+    .sign-up__comment{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 4rem 0;
+        padding: 0;
+        justify-content: center;
+    }
+    .comment__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .comment__text p {
+        font-size: 1.6rem;
+    }
+    .comment__text h3 {
+        font-size: 1.8rem;
+    }
 }
