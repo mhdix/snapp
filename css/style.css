@@ -267,3 +267,25 @@ header{
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* about-us */
+
+.about-us__image img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+@media screen and (min-width:1024px) {
+    .about-us__image img {
+        width: auto;
+    }
+}
+
+/* definition */
+
+.definition__image {
+    display: flex;
+    background-color: var(--color-light-blue);
+    border-radius: 18px;
+    justify-content: center;
+}
