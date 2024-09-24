@@ -155,6 +155,7 @@ header{
 .hero {
     background-color: var(--colot-primary);
     color: var(--color-white);
+    margin-bottom: 80px !important;
 }
 .hero__btn {
     margin-top: 2.5rem;
@@ -199,6 +200,7 @@ header{
 
 .download-link {
     display: none;
+    margin-bottom: 80px;
 }
 @media screen and (min-width: 768px) {
     .download-link {
@@ -220,6 +222,7 @@ header{
     flex-direction: column;
     align-items: center;
     background-color: var(--color-light-blue);
+    margin-bottom: 80px;
 }
 .needs__items{
     display: grid;
@@ -280,11 +283,15 @@ header{
 }
 
 /* about-us */
+.about-us{
+    margin-bottom: 80px;
+}
 
 .about-us__image img {
     width: 100%;
     height: 50vh;
     object-fit: cover;
+    margin-bottom: 80px;
 }
 @media screen and (min-width:1024px) {
     .about-us__first-section{
