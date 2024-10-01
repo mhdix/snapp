@@ -16,6 +16,7 @@
     --color-text: #3f3f3f;
     --color-border: #e5e5e5;
     --color-light-blue: #f2f5f8;
+    --border-radius: 10px;
 }
 
 html {
@@ -80,6 +81,22 @@ p {
 .text-mute {
     color: #21212195;
 }
+.hidden {
+    display: none;
+}
+.seprate {
+    border-top: 0.01rem solid var(--color-text);
+    opacity: 20%;
+    width: 100%;
+    padding: 1rem 0;
+}
+.rotate-0 {
+    rotate: 0deg;
+}
+.rotate-180 {
+    rotate: 180deg;
+}
+
 @media screen and (min-width: 768px) {
     .block {
         padding: 2rem 5rem;
@@ -151,6 +168,68 @@ header{
     }
 }
 
+/* nav mobile */
+.nav-mobile { 
+    position: fixed;
+    background-color: var(--color-white);
+    height: 100%;
+    width: 100%;
+    /* padding: 0 2rem; */
+    top: 0;
+    overflow: scroll;
+    background-color: rgb(241 245 249);
+}
+
+.nav-mobile ul {
+    margin-bottom: 1rem;
+}
+.nav-mobile > ul > span {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 1.5rem;
+    margin-top: 1.75rem;
+}
+
+.nav-mobile__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    /* margin-left: 5rem; */
+}
+.nav-mobile__title:first-child {
+    margin-bottom: 0.75rem;
+
+}
+.nav-mobile__title > span > svg{
+    display: flex;
+    align-items: center;
+    width: 2rem;
+}
+.nav-mobile__toggler {
+    width: 3rem;
+}
+.nav-mobile__item{
+    padding: 0 2rem;
+}
+.nav-mobile__item > * {
+    background-color: rgb(252, 252, 252);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+}
+
+.menu-link__items{
+    margin-right: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+@media screen and (min-width: 512px) {
+    .nav-mobile {
+        display: none;
+    }
+}
+
 /* Hero */
 .hero {
     background-color: var(--colot-primary);
@@ -164,7 +243,7 @@ header{
     transform: scaleX(-1);
     display: none;
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .hero__btn :not(:last-child) {
         display: none;
     }
@@ -401,6 +480,7 @@ header{
 /* footer */
 .footer {
     display: grid;
+
 }
 
 .footer-links{

@@ -8,7 +8,7 @@
     <title>اپلیکیشن اسنپ | سامانه ی هوشمند اسنپ</title>
 </head>
 <body>
-    <header>
+    <header x-data="{menu : false}">
         <a class="banner">
             <picture>
                 <source media="(min-width:768px)" srcset="assets/images/banner/banner-big.gif">
@@ -16,7 +16,7 @@
             </picture>
         </a>
         <nav class="nav block">
-            <div class="nav__toggler">
+            <div class="nav__toggler" @click="menu = true">
                 <div class="bar bar__one"></div>
                 <div class="bar bar__two"></div>
                 <div class="bar bar__three"></div>
@@ -29,6 +29,55 @@
             <a href="#" class="menu__icon">
                 <img src="assets/images/logo/snappTextLogo.svg"   alt="">
             </a>
+        </nav>
+        <nav class="nav-mobile" x-show="menu">
+            <div class="nav block">
+                <div class="nav-mobile__toggler text-mute" @click="menu = !menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+
+                </div>
+                <a href="#" class="menu__icon">
+                    <img src="assets/images/logo/snappTextLogo.svg"   alt="">
+                </a>
+            </div>
+
+            <div class="seprate"></div>
+
+            <div class="nav-mobile__item" >
+                <ul x-data="{ toggle: true }">
+                    <div class="nav-mobile__title" @click="toggle = !toggle ">
+                        <h3>سوپراپ اسنپ</h3>
+                        <span :class="toggle ? 'rotate-0' : 'rotate-180' ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                            </svg>
+                        </span>
+                    </div>
+                    <span class="menu-link__items text-mute" x-show="toggle">
+                        <li>ثبت نام راننده اسنپ</li>
+                        <li>باشگاه رانندگان</li>
+                        <li>پنل سازمانی</li>
+                        <li>بلاگ</li>
+                    </span> 
+                </ul>
+                <ul x-data="{ toggle: false }">
+                    <div class="nav-mobile__title" @click="toggle = !toggle ">
+                        <h3>درباره اسنپ</h3>
+                        <span :class="toggle ? 'rotate-0' : 'rotate-180' ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                            </svg>
+                        </span>
+                    </div>
+                    <span class="menu-link__items text-mute" x-show="toggle ">
+                        <li>فرصت های شغلی</li>
+                        <li>درباره ی ما</li>
+                        <li>تماس با ما</li>
+                    </span> 
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -261,4 +310,5 @@
     </footer>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js"></script>
 </html>
