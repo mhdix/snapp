@@ -328,6 +328,7 @@ header{
 .sign-up {
     background-color: var(--color-light-blue);
     width: 100%;
+    padding-bottom: 3rem;
 }
 .sign-up__header {
     display: flex;
@@ -395,4 +396,41 @@ header{
     .comment__text h3 {
         font-size: 1.8rem;
     }
+}
+
+/* footer */
+.footer {
+    display: grid;
+}
+
+.footer-links{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    row-gap: 1rem;
+    text-align: center;
+    padding: 0 4rem;
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
+}
+.footer-social > div > svg {
+    width: 2.5rem ;
+}
+
+.footer-trust {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+}
+
+.img {
+    width: 13rem !important
 }
