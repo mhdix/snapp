@@ -409,15 +409,25 @@ header{
     justify-content: center;
     row-gap: 1rem;
     text-align: center;
-    padding: 0 4rem;
-    padding-top: 3rem;
+    padding: 3rem 2rem 1rem 2rem;
     margin-bottom: 2rem;
 }
 
 .footer-social {
+    /* display: grid;
+    grid-template-columns: repeat(4, 1rem);
+    justify-content: center;
+    column-gap: 4rem; */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
     margin-bottom: 4rem;
+    padding: 0 2rem;
+}
+.footer-social > div {
+    display: flex;
+    width: fit-content;
 }
 .footer-social > div > svg {
     width: 2.5rem ;
@@ -433,4 +443,20 @@ header{
 
 .img {
     width: 13rem !important
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        
+    }   
+    .footer-links {
+        display: flex;
+        gap: 3rem;
+        line-height: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+    } 
+    .footer-social {
+        display: flex;
+    }
 }
